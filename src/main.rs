@@ -4,7 +4,7 @@ use yew::prelude::*;
 fn App() -> Html {
     html! {
         <div>
-            <p>{ "Coucou !!!" }</p>
+            <p>{ "Coucou :) !!!" }</p>
         </div>
     }
 }
