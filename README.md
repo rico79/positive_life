@@ -1,4 +1,4 @@
-## Run the project
+## Run the project locally
 
 Use trunk to run the project on ["localhost:8080"](http://localhost:8080/)
 ```
