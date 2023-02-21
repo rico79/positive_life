@@ -1,3 +1,10 @@
+## Run the project
+
+Use trunk to run the project on ["localhost:8080"](http://localhost:8080/)
+```
+trunk serve
+```
+
 ## Environment setup (for ubuntu)
 
 Install Rust
