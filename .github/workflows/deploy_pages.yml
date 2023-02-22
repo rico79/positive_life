@@ -2,7 +2,7 @@ name: Deploy Positive Life on Github Pages
 run-name: ${{ github.actor }} is deploying Positive Life on Github Pages 🚀
 on: [push]
 jobs:
-  deploy:
+  build:
     name: Build App with trunk
     runs-on: ubuntu-latest
     steps:
@@ -21,9 +21,25 @@ jobs:
           version: 'latest'
       - name: Build
         run: trunk build
-      - name: List origin files
-        run: |
-          ls ${{ github.workspace }}
       - name: List files built
-        run: |
-          ls ${{ github.workspace }}/dist
+        run: ls ${{ github.workspace }}/dist
+      - name: Upload built files
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ${{ github.workspace }}/dist/
+  deploy:
+    name: Deploy App on Github pages
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Download built files
+        uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
+          path: ${{ github.workspace }}
+      - name: Display list of deployed files
+        run: ls -R
+        working-directory: ${{ github.workspace }}
