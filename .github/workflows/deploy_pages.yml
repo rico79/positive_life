@@ -1,13 +1,19 @@
 name: Deploy Positive Life on Github Pages
 run-name: ${{ github.actor }} is deploying Positive Life on Github Pages 🚀
 on: [push]
+
 jobs:
+  # Build job
   build:
     name: Build App with trunk 📦
     runs-on: ubuntu-latest
+
     steps:
+      #Checkout files
       - name: Check out repository code
         uses: actions/checkout@v3
+
+      # Install Rust env
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -19,26 +25,30 @@ jobs:
         uses: jetli/trunk-action@v0.2.0
         with:
           version: 'latest'
+
+      # Build
       - name: Build
         run: trunk build
       - name: List files built
         run: ls ${{ github.workspace }}/dist
-      - name: Upload built files
-        uses: actions/upload-artifact@v3
+
+      # Upload pages
+      - name: Upload pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: github-pages
           path: ${{ github.workspace }}/dist/
+
+  # Deploy job
   deploy:
     name: Deploy App on Github pages 🚀
     needs: build
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
+      # Deploy pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

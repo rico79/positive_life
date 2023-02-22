@@ -1,3 +1,5 @@
+![Deploy](https://github.com/rico79/positive_life/actions/workflows/deploy_pages.yml/badge.svg)
+
 ## Run the project locally
 
 Use trunk to run the project on ["localhost:8080"](http://localhost:8080/)
