@@ -2,13 +2,13 @@ name: Deploy Positive Life on Github Pages
 run-name: ${{ github.actor }} is deploying Positive Life on Github Pages 🚀
 on: [push]
 jobs:
-  build:
+  deploy:
     name: Build App with trunk
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: install toolchain
+      - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -21,12 +21,9 @@ jobs:
           version: 'latest'
       - name: Build
         run: trunk build
+      - name: List origin files
+        run: |
+          ls ${{ github.workspace }}
       - name: List files built
         run: |
           ls ${{ github.workspace }}/dist
-  deploy:
-    name: Deploy App on Github pages
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🚀 Deploying"
