@@ -28,7 +28,7 @@ jobs:
 
       # Build
       - name: Build
-        run: trunk build --public-url "./"
+        run: trunk build --public-url "positive_life"
       - name: List files built
         run: ls ${{ github.workspace }}/dist
 
