@@ -1,5 +1,5 @@
 name: Deploy Positive Life on Github Pages
-run-name: ${{ github.actor }} is deploying ${{ github.repository_name }} on Github Pages 🚀
+run-name: ${{ github.actor }} is deploying ${{ github.repository }} on Github Pages 🚀
 on: [push]
 
 jobs:
