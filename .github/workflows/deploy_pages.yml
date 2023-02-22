@@ -26,18 +26,19 @@ jobs:
       - name: Upload built files
         uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
+          name: github-pages
           path: ${{ github.workspace }}/dist/
   deploy:
     name: Deploy App on Github pages 🚀
     needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Download built files
-        uses: actions/download-artifact@v3
-        with:
-          name: my-artifact
-          path: ${{ github.workspace }}
-      - name: Display list of deployed files
-        run: ls -R
-        working-directory: ${{ github.workspace }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
