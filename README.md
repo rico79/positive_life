@@ -1,4 +1,5 @@
 ![Deploy](https://github.com/rico79/positive_life/actions/workflows/deploy_pages.yml/badge.svg)
+![Licence](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue?style=flat-square)
 
 ## Run the project locally
 
