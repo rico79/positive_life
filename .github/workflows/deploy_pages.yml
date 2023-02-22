@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is deploying Positive Life on Github Pages 🚀
 on: [push]
 jobs:
   build:
-    name: Build App with trunk
+    name: Build App with trunk 📦
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -29,12 +29,10 @@ jobs:
           name: my-artifact
           path: ${{ github.workspace }}/dist/
   deploy:
-    name: Deploy App on Github pages
+    name: Deploy App on Github pages 🚀
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
       - name: Download built files
         uses: actions/download-artifact@v3
         with:
