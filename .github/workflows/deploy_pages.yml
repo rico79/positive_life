@@ -27,7 +27,7 @@ jobs:
           version: 'latest'
 
       # Build
-      - name: Build $(basename ${{ github.repository }})
+      - name: Build
         run: trunk build --public-url $(basename ${{ github.repository }})
       - name: List files built
         run: ls ${{ github.workspace }}/dist
