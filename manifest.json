@@ -3,8 +3,18 @@
     "short_name": "Positive Life",
     "icons": [
         {
+            "src": "./icons/lotus-150.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
             "src": "./icons/lotus-256.png",
             "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "./icons/lotus-512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
