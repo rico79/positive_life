@@ -3,6 +3,7 @@ mod static_pages;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
+// Main router of the application
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
     #[at("/")]
@@ -12,6 +13,7 @@ pub enum Route {
     NotFound,
 }
 
+// Routes definition
 fn switch(routes: Route) -> Html {
     match routes {
         Route::Home => crate::app::static_pages::welcome_html(),
@@ -19,6 +21,7 @@ fn switch(routes: Route) -> Html {
     }
 }
 
+// Parent component of the entire application
 #[function_component(App)]
 pub fn app() -> Html {
     html! {

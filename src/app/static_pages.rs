@@ -3,12 +3,14 @@ use yew_router::prelude::*;
 
 use crate::app::Route;
 
+// Static html for the walecome page
 pub fn welcome_html() -> Html {
     html! { 
         <h1>{ "Welcome !!" }</h1>
     }
 }
 
+// Static html in case of 404 return with page not found
 pub fn url_not_found_html() -> Html {
     html! {
         <main class="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-8">
