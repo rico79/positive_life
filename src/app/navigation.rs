@@ -26,16 +26,16 @@ fn AppNavigationHeader() -> Html {
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6">
             <div class="flex lg:flex-1">
                 <Link<Route> to={Route::Home} classes={"-m-1.5 p-1.5"} >
-                    <img class="h-8 w-auto" src="./icons/lotus-150.png" />
+                    <img class="h-10 w-auto" src="./icons/lotus-150.png" />
                 </Link<Route>>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <Link<Route> to={Route::NotFound} classes={"text-sm font-semibold text-gray-900"} >
+                <Link<Route> to={Route::NotFound} classes={"text-lg text-gray-900"} >
                     { "404" }
                 </Link<Route>>
             </div>
             <div class="flex flex-1 justify-end">
-                <a href="#" class="text-sm font-semibold text-gray-900">{ "Log in" }</a>
+            <img class="h-10 w-auto rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
             </div>
         </nav>
     }
