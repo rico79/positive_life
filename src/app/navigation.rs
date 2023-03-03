@@ -23,14 +23,14 @@ fn switch(routes: Route) -> Html {
 #[function_component]
 fn AppNavigationBar() -> Html {
     html! {
-        <div>
+        <nav>
             <Link<Route> to={Route::Home} >
                 { "| Home |" }
             </Link<Route>>
             <Link<Route> to={Route::NotFound} >
                 { "| 404 |" }
             </Link<Route>>
-        </div>
+        </nav>
     }
 }
 
