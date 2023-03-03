@@ -24,7 +24,7 @@ fn switch(routes: Route) -> Html {
 fn AppNavigationHeader() -> Html {
     html! {
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6">
-            <div class="flex lg:flex-1">
+            <div class="flex flex-1">
                 <Link<Route> to={Route::Home} classes={"m-sm p-sm"} >
                     <img class="h-10 w-auto" src="./icons/lotus-150.png" />
                 </Link<Route>>
