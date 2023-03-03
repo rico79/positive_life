@@ -6,18 +6,21 @@ use crate::app::navigation::Route;
 // Static html for the walecome page
 pub fn welcome_html() -> Html {
     html! { 
-        <h1>{ "Welcome !!" }</h1>
+        <main class="grid min-h-full place-items-center py-24 px-6 sm:py-32 lg:px-8">
+            <div class="text-center">
+                <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                    { "Welcome !!" }
+                </h1>
+            </div>
+        </main>
     }
 }
 
 // Static html in case of 404 return with page not found
 pub fn url_not_found_html() -> Html {
     html! {
-        <main class="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-8">
+        <main class="grid min-h-full place-items-center py-24 px-6 sm:py-32 lg:px-8">
             <div class="text-center">
-                <p class="text-base font-semibold text-green-400">
-                    { "404" }
-                </p>
                 <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                     { "Page not found" }
                 </h1>

@@ -23,13 +23,15 @@ fn switch(routes: Route) -> Html {
 #[function_component]
 fn AppNavigationBar() -> Html {
     html! {
-        <nav>
-            <Link<Route> to={Route::Home} >
-                { "| Home |" }
-            </Link<Route>>
-            <Link<Route> to={Route::NotFound} >
-                { "| 404 |" }
-            </Link<Route>>
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6">
+            <div class="flex lg:flex-1">
+                <Link<Route> to={Route::Home} >
+                    <img class="h-8 w-auto" src="./icons/lotus-150.png" />
+                </Link<Route>>
+            </div>
+            <div class="flex flex-1 justify-end">
+                <a href="#" class="text-sm font-semibold text-gray-900">{ "Profile" }</a>
+            </div>
         </nav>
     }
 }
