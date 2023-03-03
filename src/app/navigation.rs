@@ -29,13 +29,8 @@ fn AppNavigationHeader() -> Html {
                     <img class="h-10 w-auto" src="./icons/lotus-150.png" />
                 </Link<Route>>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-                <Link<Route> to={Route::NotFound} classes={"text-lg text-gray-900"} >
-                    { "404" }
-                </Link<Route>>
-            </div>
             <div class="flex flex-1 justify-end">
-            <img class="h-10 w-auto rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+                <img class="h-10 w-auto rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
             </div>
         </nav>
     }
