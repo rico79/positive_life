@@ -25,12 +25,17 @@ fn AppNavigationBar() -> Html {
     html! {
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6">
             <div class="flex lg:flex-1">
-                <Link<Route> to={Route::Home} >
+                <Link<Route> to={Route::Home} classes={"-m-1.5 p-1.5"} >
                     <img class="h-8 w-auto" src="./icons/lotus-150.png" />
                 </Link<Route>>
             </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <Link<Route> to={Route::NotFound} classes={"text-sm font-semibold text-gray-900"} >
+                    { "404" }
+                </Link<Route>>
+            </div>
             <div class="flex flex-1 justify-end">
-                <a href="#" class="text-sm font-semibold text-gray-900">{ "Profile" }</a>
+                <a href="#" class="text-sm font-semibold text-gray-900">{ "Log in" }</a>
             </div>
         </nav>
     }
