@@ -21,7 +21,7 @@ fn switch(routes: Route) -> Html {
 
 // App navigation bar component
 #[function_component]
-fn AppNavigationBar() -> Html {
+fn AppNavigationHeader() -> Html {
     html! {
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6">
             <div class="flex lg:flex-1">
@@ -46,7 +46,7 @@ fn AppNavigationBar() -> Html {
 pub fn AppRouter() -> Html {
     html! {
         <HashRouter>
-            <AppNavigationBar />
+            <AppNavigationHeader />
             <Switch<Route> render={switch} />
         </HashRouter>
     }
