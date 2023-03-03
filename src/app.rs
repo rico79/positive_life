@@ -1,5 +1,4 @@
-mod home;
-mod url_not_found;
+mod static_pages;
 
 use yew::prelude::*;
 use yew_router::prelude::*;
@@ -15,8 +14,8 @@ pub enum Route {
 
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => crate::app::home::home_html(),
-        Route::NotFound => crate::app::url_not_found::url_not_found_html(),
+        Route::Home => crate::app::static_pages::welcome_html(),
+        Route::NotFound => crate::app::static_pages::url_not_found_html(),
     }
 }
 

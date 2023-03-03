@@ -3,6 +3,12 @@ use yew_router::prelude::*;
 
 use crate::app::Route;
 
+pub fn welcome_html() -> Html {
+    html! { 
+        <h1>{ "Welcome !!" }</h1>
+    }
+}
+
 pub fn url_not_found_html() -> Html {
     html! {
         <main class="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-8">
