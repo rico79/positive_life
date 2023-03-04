@@ -3,12 +3,12 @@ mod navigation;
 
 use yew::prelude::*;
 
-use navigation::AppRouter;
+use navigation::AppMain;
 
 // Parent component of the entire application
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
-        <AppRouter />
+        <AppMain />
     }
 }
