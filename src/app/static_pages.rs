@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::app::navigation::Route;
+use crate::app::router::Route;
 
 // Static html for the walecome page
 pub fn welcome_html() -> Html {

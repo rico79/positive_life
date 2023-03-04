@@ -38,9 +38,9 @@ fn AppNavigationHeader() -> Html {
     }
 }
 
-// App main component
+// App main router component
 #[function_component]
-pub fn AppMain() -> Html {
+pub fn AppRouter() -> Html {
     html! {
         <HashRouter>
             <AppNavigationHeader />
