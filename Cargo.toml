@@ -8,3 +8,19 @@ edition = "2021"
 [dependencies]
 yew = { version = "0.20", features =["csr"] }
 yew-router = "0.17"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+gloo = "0.8"
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+  'Window',
+  'Navigator',
+  'ServiceWorkerContainer',
+  'RegistrationOptions',
+  'WorkerGlobalScope'
+]
+
+[dependencies.js-sys]
+version = "0.3"

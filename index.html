@@ -7,6 +7,8 @@
 
     <!-- trunk configuration -->
     <link data-trunk rel="rust" href="Cargo.toml" data-bin="app_bin" data-type="main" />
+    <link data-trunk rel="rust" href="Cargo.toml" data-bin="service_worker_bin" data-type="worker" />
+    <link data-trunk rel="copy-file" href="service_worker.js">
     <base data-trunk-public-url/>
     <link data-trunk rel="copy-file" href="manifest.json">
     <link data-trunk rel="copy-dir" href="icons" >

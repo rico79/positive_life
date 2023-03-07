@@ -444,6 +444,11 @@ dependencies = [
 name = "positive_life"
 version = "0.1.0"
 dependencies = [
+ "gloo",
+ "js-sys",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
  "yew",
  "yew-router",
 ]
